@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dimsum & Cheese Co.</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar">
+
+    <div class="logo" onclick="scrollToHome()">
+        🧀 Dimsum & Cheese Co.
+    </div>
+
+    <div class="cart-button" onclick="scrollToCart()">
+
+        🛒 Keranjang
+
+        <span id="cart-count">
+            0
+        </span>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                WELCOME TO
+            </p>
+
+            <h1>
+                Dimsum &<br>
+                <span>Cheese Co. 🧀</span>
+            </h1>
+
+            <p class="hero-description">
+                Dimsum, Mac n Cheese dan Mix Platter enak siap membuat hari mu lebih senang
+            </p>
+
+
+            <button
+                class="hero-button"
+                onclick="scrollToMenu()">
+
+                Lihat Menu
+
+            </button>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <!-- =========================
+         MENU NAVIGATION
+    ========================== -->
+
+    <section class="menu-section" id="menu">
+
+        <h2>
+            Our Menu
+        </h2>
+
+        <p class="subtitle">
+            Pilih makanan favoritmu!
+        </p>
+
+
+        <div class="category-buttons">
+
+            <button onclick="scrollToCategory('dimsum')">
+                Dimsum
+            </button>
+
+            <button onclick="scrollToCategory('mix')">
+                Mix
+            </button>
+
+            <button onclick="scrollToCategory('drinks')">
+                Drinks
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             DIMSUM
+        ========================== -->
+
+        <div
+            class="category"
+            id="dimsum">
+
+            <h3 class="category-title">
+                Dimsum
+            </h3>
+
+
+            <div class="menu-container">
+
+
+                <!-- 1 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/dimsum bakar.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Bakar BBQ
+                    </h4>
+
+                    <p>
+                        Isi 3 per tusuk
+                    </p>
+
+                    <div class="price">
+                        Rp15.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Bakar BBQ (Isi 3)', 15000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/dimsum ori.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Ori
+                    </h4>
+
+                    <p>
+                        Isi 4 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp13.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Ori (Isi 4)', 13000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 3 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/Dimsum mentai4.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Mentai
+                    </h4>
+
+                    <p>
+                        Isi 4 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp18.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Mentai (Isi 4)', 18000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 4 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/Dimsum mentai.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Mentai
+                    </h4>
+
+                    <p>
+                        Isi 6 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp25.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Mentai (Isi 6)', 25000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 5 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/dimsum bolognese4.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Bolognese
+                    </h4>
+
+                    <p>
+                        Isi 4 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp23.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Bolognese (Isi 4)', 23000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 6 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/Dimsum bolognese.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Bolognese
+                    </h4>
+
+                    <p>
+                        Isi 6 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp28.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Bolognese (Isi 6)', 28000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 7 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/dimsum mozarella4.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Mozarella
+                    </h4>
+
+                    <p>
+                        Isi 4 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp22.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Mozarella (Isi 4)', 22000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 8 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/dimsum moza.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Dimsum Mozarella
+                    </h4>
+
+                    <p>
+                        Isi 6 • Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp27.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Dimsum Mozarella (Isi 6)', 27000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             MIX
+        ========================== -->
+
+        <div
+            class="category"
+            id="mix">
+
+            <h3 class="category-title">
+                Mix
+            </h3>
+
+
+            <div class="menu-container">
+
+
+                <!-- 9 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mac n cheese.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mac N Cheese Ori
+                    </h4>
+
+                    <p>
+                        Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp15.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mac N Cheese Ori', 15000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 10 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mac n cheese katsu.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mac N Cheese Katsu
+                    </h4>
+
+                    <p>
+                        Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp25.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mac N Cheese Katsu', 25000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 11 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mac n cheese jalapeno.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mac N Cheese Jalapeno
+                    </h4>
+
+                    <p>
+                        Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp15.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mac N Cheese Spicy', 15000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 12 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mix plater spcy.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mix Platter Ori
+                    </h4>
+
+                    <p>
+                        Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp13.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mix Platter Ori', 13000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 13 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mix plater mayo.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mix Platter Mayo
+                    </h4>
+
+                    <p>
+                        Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp15.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mix Platter Mayo', 15000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 14 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mix plater spcy mayo.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mix Platter Spicy Mayo
+                    </h4>
+
+                    <p>
+                        Aluminium Foil Cup
+                    </p>
+
+                    <div class="price">
+                        Rp15.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mix Platter Spicy Mayo', 15000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             DRINKS
+        ========================== -->
+
+        <div
+            class="category"
+            id="drinks">
+
+            <h3 class="category-title">
+                Drinks
+            </h3>
+
+
+            <div class="menu-container">
+
+
+                <!-- 15 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/ice tea.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Ice Tea Large
+                    </h4>
+
+                    <p>
+                        Fresh & refreshing
+                    </p>
+
+                    <div class="price">
+                        Rp7.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Ice Tea Large', 7000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 16 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/Lychee Tea.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Lychee Tea Large
+                    </h4>
+
+                    <p>
+                        Fresh & fruity
+                    </p>
+
+                    <div class="price">
+                        Rp10.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Lychee Tea Large', 10000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 17 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/บางวันก็ไม่ต้องการอะไรหวือหวา แค่อยากนั่งพัก หยิบ….jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Lemon Tea Large
+                    </h4>
+
+                    <p>
+                        Fresh & citrusy
+                    </p>
+
+                    <div class="price">
+                        Rp10.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Lemon Tea Large', 10000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 18 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/jasmine tea.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Jasmine Tea Large
+                    </h4>
+
+                    <p>
+                        Wangi & refreshing
+                    </p>
+
+                    <div class="price">
+                        Rp10.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Jasmine Tea Large', 10000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- 19 -->
+                <div class="menu-card">
+
+                    <div class="menu-image">
+                        <img src="image/mineral water.jpg" alt="Dimsum Bakar BBQ">
+                    </div>
+
+                    <h4>
+                        Mineral Water Large
+                    </h4>
+
+                    <p>
+                        Simple & refreshing
+                    </p>
+
+                    <div class="price">
+                        Rp5.000
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="tambahKeranjang('Mineral Water Large', 5000)">
+
+                        + Tambah
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         KERANJANG
+    ========================== -->
+
+    <section
+        class="cart-section"
+        id="cart">
+
+        <h2>
+            🛒 Pesanan Kamu
+        </h2>
+
+        <p class="subtitle">
+            Pesanan kamu akan muncul di sini
+        </p>
+
+
+        <div id="cart-items">
+
+            <p class="empty-cart">
+                Keranjang kamu masih kosong 🥺
+            </p>
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cart-total">
+                Rp0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="checkout()">
+
+            Pesan Sekarang
+
+        </button>
+
+    </section>
+
+
+<!-- =========================
+     CHECKOUT
+========================== -->
+
+<!-- CHECKOUT -->
+<section class="checkout-section" id="checkout-section" style="display: none;">
+    <div class="checkout-box">
+
+        <div class="checkout-header">
+            <h2>Detail Pesanan</h2>
+            <p>Lengkapi detail pesanan kamu</p>
+        </div>
+
+        <form id="checkout-form" onsubmit="buatBuktiPesanan(event)">
+
+            <!-- NAMA -->
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input 
+                    type="text" 
+                    id="nama" 
+                    placeholder="Masukkan nama kamu"
+                    required
+                >
+            </div>
+
+            <!-- MAKAN DI TEMPAT / TAKE AWAY -->
+            <div class="form-group">
+                <label>Makan di mana?</label>
+
+                <div class="choice-container">
+
+                    <label class="choice-card">
+                        <input 
+                            type="radio" 
+                            name="jenisPesanan" 
+                            value="Makan di Tempat"
+                            required
+                        >
+                        <span>🍽️</span>
+                        <strong>Makan di Tempat</strong>
+                    </label>
+
+                    <label class="choice-card">
+                        <input 
+                            type="radio" 
+                            name="jenisPesanan" 
+                            value="Take Away"
+                        >
+                        <span>🥡</span>
+                        <strong>Take Away</strong>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- METODE PEMBAYARAN -->
+            <div class="form-group">
+                <label>Metode Pembayaran</label>
+
+                <div class="choice-container">
+
+                    <label class="choice-card">
+                        <input 
+                            type="radio" 
+                            name="pembayaran" 
+                            value="Cash"
+                            required
+                        >
+                        <span>💵</span>
+                        <strong>Cash</strong>
+                    </label>
+
+                    <label class="choice-card">
+                        <input 
+                            type="radio" 
+                            name="pembayaran" 
+                            value="QRIS"
+                        >
+                        <span>📱</span>
+                        <strong>QRIS</strong>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- CATATAN -->
+            <div class="form-group">
+                <label for="catatan">Catatan <small>(opsional)</small></label>
+
+                <textarea 
+                    id="catatan" 
+                    rows="3"
+                    placeholder="Contoh: saus dipisah..."
+                ></textarea>
+            </div>
+
+            <!-- RINGKASAN PESANAN -->
+            <div class="checkout-summary">
+
+                <h3>Pesanan Kamu</h3>
+
+                <div id="checkout-items"></div>
+
+                <div class="checkout-total">
+                    <span>Total</span>
+                    <strong id="checkout-total">Rp0</strong>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button type="submit" class="send-order-button">
+                Buat Bukti Pesanan
+            </button>
+
+            <button 
+                type="button" 
+                class="back-button"
+                onclick="kembaliKeKeranjang()"
+            >
+                ← Kembali ke Keranjang
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+
+<!-- POP-UP BUKTI PESANAN -->
+<div class="struk-overlay" id="receipt-section" style="display: none;">
+    <div class="struk-container">
+
+        <div class="struk-box-dark" id="struk-content">
+
+            <div class="struk-header">
+                <div class="struk-logo">🧀</div>
+                <h2>DIMSUM & CHEESE CO.</h2>
+                <p>BUKTI PESANAN</p>
+            </div>
+
+            <div class="struk-line"></div>
+
+            <div class="struk-info">
+                <div>
+                    <span>No. Pesanan</span>
+                    <strong id="receipt-number">DSC-001</strong>
+                </div>
+
+                <div>
+                    <span>Tanggal</span>
+                    <strong id="receipt-date"></strong>
+                </div>
+
+                <div>
+                    <span>Nama</span>
+                    <strong id="receipt-name"></strong>
+                </div>
+            </div>
+
+            <div class="struk-line"></div>
+
+            <h3>Pesanan</h3>
+
+            <div id="receipt-items"></div>
+
+            <div class="struk-total">
+                <span>TOTAL</span>
+                <strong id="receipt-total">Rp0</strong>
+            </div>
+
+            <div class="struk-detail">
+                <p>
+                    <span>Pembayaran</span>
+                    <strong id="receipt-payment"></strong>
+                </p>
+
+                <p>
+                    <span>Metode</span>
+                    <strong id="receipt-type"></strong>
+                </p>
+
+                <div id="receipt-note-container">
+                    <span>Catatan</span>
+                    <p id="receipt-note"></p>
+                </div>
+            </div>
+
+            <div class="struk-thanks">
+                Terima kasih sudah memesan! 🤎
+            </div>
+
+        </div>
+
+        <div class="struk-actions">
+
+            <button class="close-struk-btn" onclick="kembaliKeMenu()">
+                Tutup & Selesai
+            </button>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<!-- POP-UP QRIS -->
+<div class="qris-overlay" id="qris-section" style="display: none;">
+    <div class="qris-container">
+
+        <div class="qris-box">
+
+            <div class="qris-header">
+                <h2>Pembayaran QRIS</h2>
+                <p>Silakan scan QRIS di bawah ini</p>
+            </div>
+
+            <div class="qris-image-box">
+                <img src="image/qr.jpg" alt="QRIS Dimsum & Cheese Co.">
+            </div>
+
+            <div class="qris-total">
+                <span>Total Pembayaran</span>
+                <strong id="qris-total">Rp0</strong>
+            </div>
+
+            <p class="qris-info">
+                Scan QRIS menggunakan aplikasi pembayaran kamu.
+                Setelah pembayaran selesai, klik tombol di bawah.
+            </p>
+
+            <button class="payment-done-button" onclick="pembayaranSelesai()">
+                ✓ Pembayaran Selesai
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+
+
+    <!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>🧀 Dimsum & Cheese Co.</h3>
+
+            <small>
+                Dimsum, Mac n Cheese dan Mix Platter enak siap membuat hari mu lebih senang
+            </small>
+        </div>
+
+        <div class="footer-info">
+
+            <div>
+                <strong>🕐 Jam Operasional</strong>
+                <p>Setiap Hari<br>11.00 - 23.00</p>
+            </div>
+
+            <div>
+                <strong>📞 Kontak</strong>
+                <p>0812-8101-0218</p>
+            </div>
+
+            <div>
+                <strong>📍 Lokasi</strong>
+                <p>Jl. Kenangan No. 12<br>Jakarta Selatan</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    
+
+    <script src="script.js"></script>
+
+    
+
+
+</body>
+
+</html>

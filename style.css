@@ -1,0 +1,1472 @@
+/* ======================================
+   DASAR
+====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9f1;
+    color: #4a2c20;
+}
+
+
+/* ======================================
+   NAVBAR
+====================================== */
+
+.navbar {
+    background-color: #4a2c20;
+    color: #fff9f1;
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow: 0 3px 12px rgba(74, 44, 32, 0.25);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f7ebdd;
+}
+
+.cart-button {
+    background-color: #c58b5c;
+    color: #fff9f1;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    background-color: #a96f45;
+}
+
+#cart-count {
+    background-color: #fff9f1;
+    color: #4a2c20;
+
+    padding: 3px 8px;
+
+    border-radius: 50%;
+
+    margin-left: 5px;
+}
+
+
+/* ======================================
+   HERO
+====================================== */
+
+.hero {
+    min-height: 430px;
+
+    padding: 60px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #e8d3b9;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            #f1dfc8,
+            #e4c7a8
+        );
+}
+
+.welcome {
+    color: #795548;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 55px;
+
+    line-height: 1.05;
+
+    color: #4a2c20;
+}
+
+.hero h1 span {
+    color: #795548;
+}
+
+.hero-description {
+    margin-top: 20px;
+
+    max-width: 450px;
+
+    line-height: 1.6;
+
+    color: #6b5043;
+}
+
+.hero-button {
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #4a2c20;
+
+    color: #fff9f1;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: #795548;
+}
+
+.hero-food {
+    font-size: 120px;
+
+    text-align: center;
+}
+
+.hero-food div {
+    font-size: 55px;
+
+    margin-top: -15px;
+}
+
+
+/* ======================================
+   MENU
+====================================== */
+
+.menu-section {
+    padding: 60px 7%;
+
+    background-color: #fff9f1;
+}
+
+.menu-section h2 {
+    text-align: center;
+
+    color: #4a2c20;
+
+    font-size: 34px;
+}
+
+.subtitle {
+    text-align: center;
+
+    margin-top: 8px;
+
+    color: #8a7468;
+}
+
+
+/* ======================================
+   CATEGORY BUTTON
+====================================== */
+
+.category-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 30px 0 50px;
+
+    flex-wrap: wrap;
+}
+
+.category-buttons button {
+    border: 2px solid #c58b5c;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    background-color: #f7ebdd;
+
+    color: #4a2c20;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.category-buttons button:hover {
+    background-color: #4a2c20;
+
+    color: #fff9f1;
+
+    border-color: #4a2c20;
+}
+
+
+/* ======================================
+   CATEGORY
+====================================== */
+
+.category {
+    margin-bottom: 65px;
+
+    scroll-margin-top: 100px;
+}
+
+.category-title {
+    font-size: 27px;
+
+    color: #4a2c20;
+
+    margin-bottom: 25px;
+
+    border-left: 6px solid #c58b5c;
+
+    padding-left: 12px;
+}
+
+
+/* ======================================
+   MENU CARD
+====================================== */
+
+.menu-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.menu-card {
+    background-color: #fff;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    border: 1px solid #ead8c5;
+
+    box-shadow:
+        0 6px 18px rgba(74, 44, 32, 0.08);
+
+    transition: 0.25s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(74, 44, 32, 0.14);
+}
+
+.menu-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-card h4 {
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    min-height: 43px;
+
+    color: #4a2c20;
+}
+
+.menu-card p {
+    margin-top: 8px;
+
+    color: #8a7468;
+
+    font-size: 13px;
+
+    min-height: 35px;
+
+    line-height: 1.4;
+}
+
+
+/* ======================================
+   HARGA
+====================================== */
+
+.price {
+    margin-top: 12px;
+
+    color: #795548;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* ======================================
+   BUTTON TAMBAH
+====================================== */
+
+.add-button {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: #c58b5c;
+
+    color: #fff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #4a2c20;
+}
+
+
+/* ======================================
+   KERANJANG
+====================================== */
+
+.cart-section {
+    padding: 60px 7%;
+
+    background-color: #e8d3b9;
+
+    scroll-margin-top: 80px;
+}
+
+.cart-section h2 {
+    text-align: center;
+
+    color: #4a2c20;
+
+    font-size: 32px;
+}
+
+
+/* ITEM KERANJANG */
+
+.cart-item {
+    max-width: 850px;
+
+    margin: 12px auto;
+
+    padding: 18px 22px;
+
+    background-color: #fff9f1;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border: 1px solid #ddc4aa;
+
+    box-shadow:
+        0 4px 12px rgba(74, 44, 32, 0.08);
+}
+
+.cart-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.cart-info small {
+    color: #8a7468;
+}
+
+
+/* ======================================
+   JUMLAH
+====================================== */
+
+.quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.quantity button {
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #795548;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #4a2c20;
+}
+
+.quantity span {
+    min-width: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.subtotal {
+    min-width: 100px;
+
+    text-align: right;
+
+    color: #4a2c20;
+}
+
+
+/* ======================================
+   KERANJANG KOSONG
+====================================== */
+
+.empty-cart {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #8a7468;
+}
+
+
+/* ======================================
+   TOTAL
+====================================== */
+
+.cart-total {
+    max-width: 850px;
+
+    margin: 25px auto 0;
+
+    padding: 20px;
+
+    border-top: 2px dashed #a67c5b;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+}
+
+.cart-total strong {
+    color: #4a2c20;
+}
+
+
+/* ======================================
+   CHECKOUT
+====================================== */
+
+.checkout-button {
+    display: block;
+
+    margin: 10px auto;
+
+    padding: 14px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #4a2c20;
+
+    color: #fff9f1;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #795548;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #4a2c20;
+    color: #fff9f1;
+    padding: 35px 25px 25px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.footer-brand small {
+    color: #e8d3b9;
+}
+
+.footer-info {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-info div {
+    min-width: 130px;
+}
+
+.footer-info strong {
+    font-size: 14px;
+}
+
+.footer-info p {
+    color: #e8d3b9;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 7px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-info {
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .footer-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+/* ======================================
+   TABLET
+====================================== */
+
+@media (max-width: 1000px) {
+
+    .menu-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* ======================================
+   HP
+====================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .cart-button {
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-food {
+        margin-top: 30px;
+
+        font-size: 80px;
+    }
+
+    .menu-section {
+        padding: 50px 5%;
+    }
+
+    .menu-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .menu-card {
+        padding: 13px;
+    }
+
+    .food-image {
+        min-height: 100px;
+
+        font-size: 50px;
+    }
+
+    .menu-card h4 {
+        font-size: 16px;
+    }
+
+    .cart-section {
+        padding: 50px 5%;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .cart-info {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .subtotal {
+        min-width: auto;
+    }
+
+}
+
+
+/* ======================================
+   HP KECIL
+====================================== */
+
+@media (max-width: 450px) {
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+}
+
+
+
+/* ======================================
+   CHECKOUT
+====================================== */
+
+.checkout-section {
+    padding: 70px 7%;
+
+    background-color: #fff9f1;
+
+    scroll-margin-top: 80px;
+}
+
+
+.checkout-box {
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    border: 1px solid #ead8c5;
+
+    box-shadow:
+        0 8px 25px rgba(74, 44, 32, 0.1);
+}
+
+
+/* HEADER */
+
+.checkout-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.checkout-header span {
+    font-size: 45px;
+}
+
+
+.checkout-header h2 {
+    margin-top: 5px;
+
+    font-size: 30px;
+
+    color: #4a2c20;
+}
+
+
+.checkout-header p {
+    margin-top: 8px;
+
+    color: #8a7468;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #4a2c20;
+
+    font-weight: bold;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: 1px solid #d9c0a8;
+
+    border-radius: 12px;
+
+    background-color: #fff9f1;
+
+    color: #4a2c20;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #c58b5c;
+
+    box-shadow:
+        0 0 0 3px rgba(197, 139, 92, 0.15);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ======================================
+   RINGKASAN CHECKOUT
+====================================== */
+
+.checkout-summary {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background-color: #f7ebdd;
+
+    border-radius: 15px;
+}
+
+
+.checkout-summary h3 {
+    margin-bottom: 15px;
+
+    color: #4a2c20;
+}
+
+
+.checkout-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px dashed #cdb29a;
+}
+
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+
+.checkout-item div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.checkout-item small {
+    color: #8a7468;
+}
+
+
+.checkout-item > strong {
+    color: #795548;
+
+    white-space: nowrap;
+}
+
+
+/* TOTAL CHECKOUT */
+
+.checkout-total {
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 2px solid #c58b5c;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+}
+
+
+.checkout-total strong {
+    color: #4a2c20;
+}
+
+
+/* ======================================
+   BUTTON KIRIM
+====================================== */
+
+.send-order-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #4a2c20;
+
+    color: #fff9f1;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.send-order-button:hover {
+    background-color: #795548;
+}
+
+
+/* ======================================
+   BUTTON KEMBALI
+====================================== */
+
+.back-button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 11px;
+
+    border: 1px solid #c58b5c;
+
+    border-radius: 25px;
+
+    background-color: transparent;
+
+    color: #795548;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.back-button:hover {
+    background-color: #f7ebdd;
+}
+
+
+/* ======================================
+   CHECKOUT HP
+====================================== */
+
+@media (max-width: 600px) {
+
+    .checkout-section {
+        padding: 50px 5%;
+    }
+
+
+    .checkout-box {
+        padding: 25px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .checkout-header h2 {
+        font-size: 26px;
+    }
+
+
+    .checkout-item {
+        gap: 10px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* ==========================================
+   POP-UP STRUK PESANAN
+   ========================================== */
+
+.struk-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.struk-container {
+    width: 100%;
+    max-width: 320px;
+}
+
+.struk-box-dark {
+    background: #242424;
+    color: #ffffff;
+
+    padding: 18px 16px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+    font-family: "Courier New", monospace;
+
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.struk-header {
+    text-align: center;
+}
+
+.struk-logo {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.struk-header h2 {
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.struk-header p {
+    font-size: 11px;
+    margin: 5px 0 0;
+    color: #dddddd;
+}
+
+.struk-line {
+    border-top: 1px dashed #555555;
+    margin: 12px 0;
+}
+
+.struk-info {
+    font-size: 10px;
+}
+
+.struk-info div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    gap: 10px;
+}
+
+.struk-info span {
+    color: #cccccc;
+}
+
+.struk-info strong {
+    text-align: right;
+}
+
+.struk-box-dark h3 {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 5px 0;
+
+    font-size: 10px;
+}
+
+.receipt-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.receipt-item strong {
+    font-size: 10px;
+}
+
+.receipt-item small {
+    color: #cccccc;
+    font-size: 9px;
+    margin-top: 2px;
+}
+
+.receipt-item > strong {
+    white-space: nowrap;
+}
+
+.struk-total {
+    border-top: 1px dashed #555555;
+    border-bottom: 1px dashed #555555;
+
+    margin-top: 8px;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+.struk-total strong {
+    font-size: 13px;
+}
+
+.struk-detail {
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+.struk-detail p {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 5px 0;
+
+    gap: 10px;
+}
+
+.struk-detail span {
+    color: #cccccc;
+}
+
+.struk-detail strong {
+    text-align: right;
+}
+
+#receipt-note-container {
+    margin-top: 8px;
+}
+
+#receipt-note-container > span {
+    display: block;
+    margin-bottom: 3px;
+}
+
+#receipt-note {
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.struk-thanks {
+    text-align: center;
+
+    font-size: 9px;
+
+    color: #bbbbbb;
+
+    margin-top: 18px;
+}
+
+
+/* TOMBOL STRUK */
+
+.struk-actions {
+    margin-top: 10px;
+}
+
+.download-struk-btn,
+.close-struk-btn {
+    width: 100%;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 10px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 7px;
+}
+
+.download-struk-btn {
+    background: #d4a65f;
+    color: #ffffff;
+}
+
+.close-struk-btn {
+    background: #444444;
+    color: #ffffff;
+}
+
+.download-struk-btn:hover {
+    opacity: 0.9;
+}
+
+.close-struk-btn:hover {
+    background: #333333;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .struk-overlay {
+        padding: 15px;
+    }
+
+    .struk-container {
+        max-width: 300px;
+    }
+
+    .struk-box-dark {
+        padding: 16px 14px;
+    }
+
+}
+
+/* ==========================================
+   POP-UP QRIS
+   ========================================== */
+
+.qris-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10000;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.qris-container {
+    width: 100%;
+    max-width: 340px;
+
+    margin: 0 auto;
+}
+
+.qris-box {
+    background: #fff9f1;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.qris-header h2 {
+    margin: 0;
+
+    color: #4a2c20;
+
+    font-size: 20px;
+}
+
+.qris-header p {
+    margin: 7px 0 18px;
+
+    color: #795548;
+
+    font-size: 13px;
+}
+
+.qris-image-box {
+    background: #ffffff;
+
+    padding: 12px;
+
+    width: 220px;
+    height: 220px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qris-image-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.qris-total {
+    background: #e8d3b9;
+
+    padding: 10px;
+
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #4a2c20;
+
+    margin-bottom: 12px;
+}
+
+.qris-total span {
+    font-size: 12px;
+}
+
+.qris-total strong {
+    font-size: 15px;
+}
+
+.qris-info {
+    font-size: 11px;
+
+    color: #795548;
+
+    line-height: 1.5;
+
+    margin: 12px 5px 18px;
+}
+
+.payment-done-button {
+    width: 100%;
+
+    border: none;
+
+    background: #795548;
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.payment-done-button:hover {
+    background: #4a2c20;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .qris-container {
+        max-width: 310px;
+    }
+
+    .qris-box {
+        padding: 18px;
+    }
+
+    .qris-image-box {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+.logo {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
