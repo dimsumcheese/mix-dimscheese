@@ -1470,3 +1470,115 @@ footer {
 .logo:hover {
     opacity: 0.8;
 }
+
+/* =========================
+   KEUNGGULAN WEBSITE
+========================== */
+
+.advantages-section {
+    padding: 70px 25px;
+    background: #F7EBDD;
+    text-align: center;
+}
+
+.advantages-header h2 {
+    margin-bottom: 10px;
+    color: #4A2C20;
+    font-size: 30px;
+}
+
+.advantages-header p {
+    color: #795548;
+    margin-bottom: 40px;
+}
+
+.advantages-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.advantage-card {
+    background: #FFF9F1;
+    padding: 30px 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(74, 44, 32, 0.12);
+
+    border: 1px solid #E8D3B9;
+
+    transition: 0.3s;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #E8D3B9;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+.advantage-card h3 {
+    color: #4A2C20;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.advantage-card p {
+    color: #795548;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .advantages-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .advantages-section {
+        padding: 50px 20px;
+    }
+
+}
+
+.whatsapp-order-button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #5F7658;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.whatsapp-order-button:hover {
+    background: #4A6045;
+    transform: translateY(-2px);
+}
