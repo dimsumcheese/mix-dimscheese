@@ -3,6 +3,8 @@
 // ======================================
 
 let keranjang = [];
+let pesananTerakhir = null;
+let sudahDisimpan = false;
 
 
 // ======================================
@@ -384,6 +386,23 @@ function buatBuktiPesanan(event) {
     document.getElementById("receipt-total").textContent =
         formatRupiah(total);
 
+        // Simpan data pesanan terakhir
+    const detailPesanan = keranjang
+        .map(barang => `${barang.nama} x${barang.jumlah}`)
+        .join(" | ");
+
+    pesananTerakhir = {
+        nomorPesanan: nomorPesanan,
+        nama: nama,
+        pesanan: detailPesanan,
+        jenisPesanan: jenisPesanan,
+        pembayaran: pembayaran,
+        total: total,
+        catatan: catatan
+    };
+
+    sudahDisimpan = false;
+
 
     document.getElementById("checkout-section").style.display = "none";
 
@@ -416,11 +435,6 @@ if (pembayaran === "QRIS") {
     });
 }
 
-
-    // Scroll ke struk
-    receiptSection.scrollIntoView({
-        behavior: "smooth"
-    });
 }
 
 
@@ -562,6 +576,75 @@ function tampilkanCheckout() {
 
 
 function scrollToHome() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function kirimKeWhatsApp() {
+
+    const nomorWhatsApp = "6281281010218";
+
+    // Pastikan data pesanan ada
+    if (!pesananTerakhir) {
+        alert("Data pesanan tidak ditemukan 🤎");
+        return;
+    }
+
+    // Buat isi pesan
+    let pesan = "";
+
+    pesan += "Halo, saya ingin mengirim bukti pesanan dari Dimsum & Cheese Co.\n\n";
+
+    pesan += "🧀 *BUKTI PESANAN*\n";
+    pesan += `No. Pesanan: ${pesananTerakhir.nomorPesanan}\n`;
+    pesan += `Tanggal: ${document.getElementById("receipt-date").textContent}\n`;
+    pesan += `Nama: ${pesananTerakhir.nama}\n`;
+    pesan += `Jenis: ${pesananTerakhir.jenisPesanan}\n`;
+    pesan += `Pembayaran: ${pesananTerakhir.pembayaran}\n\n`;
+
+    pesan += "*Pesanan:*\n";
+
+    keranjang.forEach((barang) => {
+
+        const subtotal =
+            barang.harga * barang.jumlah;
+
+        pesan += `- ${barang.nama} x${barang.jumlah} = ${formatRupiah(subtotal)}\n`;
+    });
+
+    pesan += `\n*Total: ${formatRupiah(pesananTerakhir.total)}*\n`;
+
+    if (pesananTerakhir.catatan.trim() !== "") {
+        pesan += `Catatan: ${pesananTerakhir.catatan}\n`;
+    }
+
+    pesan += "\nTerima kasih 🤎";
+
+    // Encode pesan supaya aman untuk URL WhatsApp
+    const pesanEncoded = encodeURIComponent(pesan);
+
+    const urlWhatsApp =
+        `https://wa.me/${nomorWhatsApp}?text=${pesanEncoded}`;
+
+    // Buka WhatsApp
+    window.open(urlWhatsApp, "_blank");
+
+    // Tutup popup struk
+    document.getElementById("receipt-section").style.display = "none";
+
+    // Kosongkan keranjang
+    keranjang = [];
+
+    // Reset data pesanan
+    pesananTerakhir = null;
+    sudahDisimpan = false;
+
+    // Update keranjang
+    tampilkanKeranjang();
+
+    // Kembali ke atas website
     window.scrollTo({
         top: 0,
         behavior: "smooth"
